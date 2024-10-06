@@ -1,135 +1,116 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import '../css/main.css'
+import Layout from "../layouts/Layout.astro";
+import "../css/main.css";
 ---
 
-<section class="">
-  <Navbar />
-  <div class="mt-32"></div>
-  <section class="bg-[#d4bfaa] flex justify-center p-24">
-    <h2 class="text-white text-5xl text-center">
-      conectamos con tu marca <br /> en su propio mundo <br /> de forma exclusiva.
-    </h2>
-  </section>
-  <section class="flex justify-center p-14">
-    <div class="grid grid-cols-1 text-center gap-5">
-      <h2 class="text-3xl text-[#555636]">¿Quiénes somos?</h2>
-      <p class="text-[#555636]">
-        Mentes creativas, estratégicas y planificadas
-      </p>
-      <p class="text-[#555636]">
-        La eficiencia y constancia es nuestro mayor componente para alcanzar tus
-        expectativas.<br />Te invitamos a vivir con nosotras las nuevas
-        tendencias, el diseño y la era digital en la esencia de tu marca.
-      </p>
-      <p class="text-[#555636]">
-        Creamos conceptos estretégicos y cretivos que sirven como eje para cada
-        paso que damos.
-      </p>
-    </div>
-  </section>
-  <section class="grid grid-cols-5 p-20 text-center">
-    <h2 class="text-3xl text-[#555636]">Logotipo</h2>
-    <h2 class="text-3xl text-[#555636]">Branding</h2>
-    <h2 class="text-3xl text-[#555636]">Social media (home)</h2>
-    <h2 class="text-3xl text-[#555636]">Social media (food)</h2>
-    <h2 class="text-3xl text-[#555636]">Social media (food)</h2>
-  </section>
-  <section>
-    <div class="text-center text-2xl text-[#555636] mb-10">Servicios</div>
-    <div class="grid grid-cols-3 gap-20 mx-32">
-      <div
-        class="bg-[#d4bfaa] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
-      >
-        <h2 class="text-3xl">Branding</h2>
-        <p>
-          Desarrollamos tu marca de lo mas profundo hasta lo mas superficial
-          para mostrarla con sentido.
+<Layout>
+  <section class="">
+    <Navbar />
+    <div class="mt-32"></div>
+    <section class="bg-[#d4bfaa] flex justify-center p-24">
+      <h2 class="text-white text-5xl text-center">
+        conectamos con tu marca <br /> en su propio mundo <br /> de forma exclusiva.
+      </h2>
+    </section>
+    <section class="flex justify-center p-14">
+      <div class="grid grid-cols-1 text-center gap-5">
+        <h2 class="text-3xl text-[#555636]">¿Quiénes somos?</h2>
+        <p class="text-[#555636]">
+          Mentes creativas, estratégicas y planificadas
         </p>
-        <p>Sí, creamos marcas propias</p>
-      </div>
-      <div
-        class="bg-[#555636] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
-      >
-        <h2 class="text-3xl">Gestión de <br />Redes Sociales</h2>
-        <p>
-          Gestionamos tu marca y comunidad en redes sociales. Desde la
-          planificación estratégica, hasta la creación de contenido y monitoreo
-          diario.
+        <p class="text-[#555636]">
+          La eficiencia y constancia es nuestro mayor componente para alcanzar
+          tus expectativas.<br />Te invitamos a vivir con nosotras las nuevas
+          tendencias, el diseño y la era digital en la esencia de tu marca.
         </p>
-        <p>Tú decides hasta donde llegar.</p>
+        <p class="text-[#555636]">
+          Creamos conceptos estretégicos y cretivos que sirven como eje para
+          cada paso que damos.
+        </p>
       </div>
-      <div
-        class="bg-[#d4bfaa] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
-      >
+    </section>
+    <section class="grid grid-cols-5 p-20 text-center">
+      <h2 class="text-3xl text-[#555636]">Logotipo</h2>
+      <h2 class="text-3xl text-[#555636]">Branding</h2>
+      <h2 class="text-3xl text-[#555636]">Social media (home)</h2>
+      <h2 class="text-3xl text-[#555636]">Social media (food)</h2>
+      <h2 class="text-3xl text-[#555636]">Social media (food)</h2>
+    </section>
+    <section>
+      <div class="text-center text-2xl text-[#555636] mb-10">Servicios</div>
+      <div class="grid grid-cols-3 gap-16 mx-24">
+        <div
+          class="bg-[#d4bfaa] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
+        >
+          <h2 class="text-3xl">Branding</h2>
+          <p>
+            Desarrollamos tu marca de lo mas profundo hasta lo mas superficial
+            para mostrarla con sentido.
+          </p>
+          <p>Sí, creamos marcas propias</p>
+        </div>
+        <div
+          class="bg-[#555636] py-20 px-5 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
+        >
+          <h2 class="text-3xl">Gestión de <br />Redes Sociales</h2>
+          <p>
+            Gestionamos tu marca y comunidad en redes sociales. Desde la
+            planificación estratégica, hasta la creación de contenido y
+            monitoreo diario.
+          </p>
+          <p>Tú decides hasta donde llegar.</p>
+        </div>
+        <div
+          class="bg-[#d4bfaa] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
+        >
+          <h2 class="text-3xl">Identidad Visual</h2>
+          <p>Diseñamos la esencia de tu marca.</p>
+          <p>
+            Aquí hablamos de un brandbook. <br /> Todo lo que necesitas a nivel gráfico.
+          </p>
+        </div>
+        <div
+          class="bg-[#555636] py-20 px-5 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
+        >
+          <h2 class="text-3xl">Creación de contenido</h2>
+          <p>Hacemos todo el contenido orgánico o profesional por ti.</p>
+          <p>
+            Si no tienes tiempo o no eres constante creando el contenido que
+            necesitas.
+          </p>
+        </div>
+        <div
+          class="bg-[#d4bfaa] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
+        >
+          <h2 class="text-3xl">Look and feel</h2>
+          <p>
+            Instagram es tu vitrina, definimos una identidad visual coherente y
+            atractiva para tu marca en redes sociales
+          </p>
+        </div>
+        <div
+          class="bg-[#555636] py-20 px-7 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
+        >
+          <h2 class="text-3xl">Estrategia comunicacional</h2>
+          <p>
+            Toda marca quiere ser parte de este mundo digital. Pero no todas
+            tienen una partida. De eso se trata.
+          </p>
+          <p>
+            ¿Tienes una marca pero no sabes como arrancar?¡Aterricemosla ya!
+          </p>
+        </div>
       </div>
-      <div
-        class="bg-[#555636] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
-      >
-      </div>
-      <div
-        class="bg-[#d4bfaa] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
-      >
-      </div>
-      <div
-        class="bg-[#555636] py-20 px-3 rounded-[300px] text-center grid grid-cols-1 text-white gap-5"
-      >
-      </div>
-    </div>
+    </section>
+    <section class="text-center text-3xl py-36 px-48">
+      <h2 class="text-[#555636]">
+        Perseguimos la efectividad, transparencia y compromiso para cumplir con
+        los estándares de tu marca.
+      </h2>
+      <h2 class="text-[#555636] mt-28">
+        CONTACTO:<br>THESTUDIOAV@GMAIL.COM
+      </h2>
+    </section>
   </section>
-</section>
-<!-- <style>
-  .poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-
-  .poppins-extralight {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-
-  .poppins-light {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-
-  .poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  .poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-
-  .poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  .poppins-extrabold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-
-  .poppins-black {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-</style> -->
+</Layout>
