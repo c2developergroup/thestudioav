@@ -1,0 +1,31 @@
+---
+import C2Navbar from "../components/Navbar.astro";
+---
+
+<html lang="es" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicomthestudio.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C² Developer Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Smooch+Sans:wght@500;700;800;900&display=swap"
+    />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    /> -->
+  </head>
+  <body class="bg-white overflow-x-clip">
+    <div id="root">
+      <C2Navbar />
+      <div id="content" class="w-screen overflow-x-clip overflow-y-auto">
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>
