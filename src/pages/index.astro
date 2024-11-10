@@ -1,5 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import Servicios from "../components/Servicios.astro";
+import Clientes from "../components/Clientes.astro";
 import Layout from "../layouts/Layout.astro";
 import "../css/main.css";
 ---
@@ -7,151 +9,34 @@ import "../css/main.css";
 <Layout>
   <section class="">
     <Navbar />
-    <section class="bg-[#d4bfaa] flex justify-center p-24">
-      <h2 class="text-white text-5xl text-center">
-        conectamos con tu marca <br /> en su propio mundo <br /> de forma exclusiva.
-      </h2>
-    </section>
-    <section class="flex justify-center p-14">
-      <div class="grid grid-cols-1 text-center gap-5">
-        <h2 class="text-3xl text-[#555636]">¿Quiénes somos?</h2>
+    <section>
+      <section class="bg-[#d4bfaa] flex justify-center p-24 relative">
+        <h2 class="text-white text-5xl text-center relative z-20">
+          conectamos con tu marca <br /> en su propio mundo <br /> de forma exclusiva.
+        </h2>
+      </section>
+      <div class="flex justify-end pr-28 -mb-20 relative -top-40">
+        <img src="/lines.png" class="absolute top-0 -z-10 w-48 h-auto">
+      </div>
+    </section>    
+    <section class="flex p-14 mt-20">
+      <div class="grid grid-cols-1 gap-5 w-1/2 ml-56 text-xl">
         <p class="text-[#555636]">
-          Mentes creativas, estratégicas y planificadas
+          Somos mentes creativas, estratégicas y planificadas
         </p>
         <p class="text-[#555636]">
           La eficiencia y constancia es nuestro mayor componente para alcanzar
-          tus expectativas.<br />Te invitamos a vivir con nosotras las nuevas
-          tendencias, el diseño y la era digital en la esencia de tu marca.
+          tus expectativas.
         </p>
-        <p class="text-[#555636]">
+        <p class="text-[#555636] font-medium italic">
           Creamos conceptos estretégicos y cretivos que sirven como eje para
           cada paso que damos.
         </p>
       </div>
     </section>
-    <section class="grid grid-cols-5 p-20 text-center">
-      <h2 class="text-3xl text-[#555636]">Logotipo</h2>
-      <h2 class="text-3xl text-[#555636]">Branding</h2>
-      <h2 class="text-3xl text-[#555636]">Social media (home)</h2>
-      <h2 class="text-3xl text-[#555636]">Social media (food)</h2>
-      <h2 class="text-3xl text-[#555636]">Social media (food)</h2>
     </section>
-    <section>
-      <div class="text-center text-2xl text-[#555636] mb-10">Servicios</div>
-      <div class="grid grid-cols-3 gap-16 mx-24">
-        <div class="flip-box h-full w-full">
-          <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
-            <div
-              class="bg-[#d4bfaa] py-48 px-3 rounded-[300px] text-center content-center flip-box-front"
-            >
-              <h2 class="text-3xl">Branding</h2>
-            </div>
-            <div
-              class="bg-[#d4bfaa] py-40 px-3 rounded-[300px] text-center grid grid-cols-1 gap-5 flip-box-back absolute"
-            >
-              <p>
-                Desarrollamos tu marca de lo mas profundo hasta lo mas
-                superficial para mostrarla con sentido.
-              </p>
-              <p>Sí, creamos marcas propias</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-box h-full w-full">
-          <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
-            <div
-              class="bg-[#555636] py-44 px-3 rounded-[300px] text-center content-center flip-box-front"
-            >
-              <h2 class="text-3xl">Gestión de <br />Redes Sociales</h2>
-            </div>
-            <div
-              class="bg-[#555636] py-32 px-3 rounded-[300px] text-center grid grid-cols-1 gap-5 flip-box-back absolute"
-            >
-              <p>
-                Gestionamos tu marca y comunidad en redes sociales. Desde la
-                planificación estratégica, hasta la creación de contenido y
-                monitoreo diario.
-              </p>
-              <p>Tú decides hasta donde llegar.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-box h-full w-full">
-          <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
-            <div
-              class="bg-[#d4bfaa] py-48 px-3 rounded-[300px] text-center content-center flip-box-front"
-            >
-              <h2 class="text-3xl">Identidad Visual</h2>
-            </div>
-            <div
-              class="bg-[#d4bfaa] py-40 px-3 rounded-[300px] text-center grid grid-cols-1 gap-5 flip-box-back absolute"
-            >
-              <p>Diseñamos la esencia de tu marca.</p>
-              <p>
-                Aquí hablamos de un brandbook. <br /> Todo lo que necesitas a nivel
-                gráfico.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-box h-full w-full">
-          <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
-            <div
-              class="bg-[#555636] py-44 px-3 rounded-[300px] text-center content-center flip-box-front"
-            >
-              <h2 class="text-3xl">Creación de contenido</h2>
-            </div>
-            <div
-              class="bg-[#555636] py-32 px-3 rounded-[300px] text-center grid grid-cols-1 gap-5 flip-box-back absolute"
-            >
-              <p>Hacemos todo el contenido orgánico o profesional por ti.</p>
-              <p>
-                Si no tienes tiempo o no eres constante creando el contenido que
-                necesitas.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-box h-full w-full">
-          <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
-            <div
-              class="bg-[#d4bfaa] py-48 px-3 rounded-[300px] text-center content-center flip-box-front"
-            >
-              <h2 class="text-3xl">Look and feel</h2>
-            </div>
-            <div
-              class="bg-[#d4bfaa] py-40 px-3 rounded-[300px] text-center grid grid-cols-1 gap-5 flip-box-back absolute"
-            >
-              <p>
-                Instagram es tu vitrina, definimos una identidad visual
-                coherente y atractiva para tu marca en redes sociales
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="flip-box h-full w-full">
-          <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
-            <div
-              class="bg-[#555636] py-44 px-3 rounded-[300px] text-center content-center flip-box-front"
-            >
-              <h2 class="text-3xl">Estrategia comunicacional</h2>
-            </div>
-            <div
-              class="bg-[#555636] py-32 px-7 rounded-[300px] text-center grid grid-cols-1 gap-5 flip-box-back absolute"
-            >
-              <p>
-                Toda marca quiere ser parte de <br />este mundo digital. Pero no <br
-                />todas tienen una partida. De eso <br />se trata.
-              </p>
-              <p>
-                ¿Tienes una marca pero <br />no sabes como arrancar?<br
-                />¡Aterricemosla ya!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Servicios />
+    <Clientes />
     <section class="text-center text-3xl py-36 px-48">
       <h2 class="text-[#555636]">
         Perseguimos la efectividad, transparencia y compromiso para cumplir con
