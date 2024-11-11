@@ -1,0 +1,45 @@
+---
+// No es necesario un frontmatter
+---
+
+<section class="flex justify-center text-2xl text-center mt-28">
+  <p id="retype-text"><span id="content"></span><span id="cursor">|</span></p>
+</section>
+
+<style>
+  .blink {
+    animation: blink 1s step-start infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  if (typeof window !== 'undefined') {
+    document.addEventListener("DOMContentLoaded", function() {
+      const textElement = document.getElementById("content");
+      const cursorElement = document.getElementById("cursor");
+      const text = "Te invitamos a vivir con nosotras\nlas nuevas tendencias, el diseño y\nla era digital en la esencia de tu marca.";
+      let index = 0;
+      const speed = 100;  // Velocidad de escritura en milisegundos
+
+      function type() {
+        const currentText = text.slice(0, index).replace(/\n/g, '<br>');
+        textElement.innerHTML = currentText;
+
+        if (index < text.length) {
+          index++;
+          setTimeout(type, speed);
+        } else {
+          cursorElement.classList.add('blink'); // Añadir clase de titileo cuando termine el efecto
+        }
+      }
+
+      type();
+    });
+  }
+</script>
