@@ -1,5 +1,5 @@
 {
-  "name": "c2-developer-group",
+  "name": "the-studio",
   "version": "0.2.0",
   "private": true,
   "scripts": {
@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/c2developergroup/c2developergroup.github.io.git"
+    "url": "git+https://github.com/c2developergroup/thestudio.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/c2developergroup/c2developergroup.github.io/issues"
+    "url": "https://github.com/c2developergroup/thestudio.github.io/issues"
   },
-  "homepage": "https://github.com/c2developergroup/c2developergroup.github.io#readme",
+  "homepage": "https://github.com/c2developergroup/thestudio.github.io#readme",
   "dependencies": {
     "@astrojs/react": "^3.0.8",
     "@astrojs/tailwind": "^5.0.4",
