@@ -4,6 +4,7 @@ import Servicios from "../components/Servicios.astro";
 import Clientes from "../components/Clientes.astro";
 import MainPage from "../components/MainPage.astro";
 import Retype from "../components/Retype.astro";
+import { FaInstagram } from "react-icons/fa";
 import "../css/main.css";
 ---
 
@@ -38,20 +39,39 @@ import "../css/main.css";
   </section>
   <Servicios />
   <Clientes />
-  <Retype />
+  <div class="w-full h-32">
+    <Retype />
+  </div>
   <section class="justify-center grid grid-col-1 text-center mt-28">
     <p class="text-red-500 font-medium text-2xl">NICHO</p>
     <div>
-      <p class="text-2xl">BIENESTAR <span class="text-red-500">|</span></p>
+      <p class="text-2xl">
+        BIENESTAR <span class="text-red-500">|</span> GASTRONOMÍA <span
+          class="text-red-500">|</span
+        > LIFESTYLE <span class="text-red-500">|</span> HOGAR <span
+          class="text-red-500">|</span
+        > FASHION
+      </p>
     </div>
   </section>
-  <section class="text-center text-3xl py-36 px-48">
-    <h2 class="text-[#555636]">
+  <section class="text-center text-3xl py-10 px-48">
+    <p class="text-[#555636]">
       Perseguimos la efectividad, transparencia y compromiso para cumplir con
       los estándares de tu marca.
-    </h2>
-    <h2 class="text-[#555636] mt-28">
-      CONTACTO:<br />THESTUDIOAV@GMAIL.COM
-    </h2>
+    </p>
   </section>
+  <section>
+    <div class="grid grid-cols-1 text-center text-[#555636] mt-28 font-normal">
+      <div class="flex justify-center content-center">
+        <a
+          href="https://www.instagram.com/thestudioav?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        >
+          <FaInstagram className="m-auto text-4xl" />
+          <span class="text-[22px]"> @thestudioav </span>
+        </a>
+      </div>
+      <a href="" class="text-[22px]">thestudioav@gmail.com</a>
+    </div>
+  </section>
+  <section class="py-16"></section>
 </MainPage>
