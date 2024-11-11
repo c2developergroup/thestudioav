@@ -2,7 +2,7 @@
 // No es necesario un frontmatter
 ---
 
-<section class="flex justify-center text-2xl text-center mt-28">
+<section id="retype-section" class="flex justify-center text-2xl text-center mt-28">
   <p id="retype-text"><span id="content"></span><span id="cursor">|</span></p>
 </section>
 
@@ -21,6 +21,7 @@
 <script>
   if (typeof window !== 'undefined') {
     document.addEventListener("DOMContentLoaded", function() {
+      const section = document.getElementById('retype-section');
       const textElement = document.getElementById("content");
       const cursorElement = document.getElementById("cursor");
       const text = "Te invitamos a vivir con nosotras\nlas nuevas tendencias, el diseño y\nla era digital en la esencia de tu marca.";
@@ -39,7 +40,16 @@
         }
       }
 
-      type();
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            type();
+            observer.unobserve(section); // Deja de observar después de empezar el efecto
+          }
+        });
+      });
+
+      observer.observe(section);
     });
   }
 </script>
