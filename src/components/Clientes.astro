@@ -1,5 +1,110 @@
-<section id="Clientes" class="mt-20">
-  <!-- <div class="text-center text-2xl text-[#555636] mb-10">Servicios</div> -->
+---
+const images = [
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-04.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-05.png` },
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-06.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-07.png` },
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-08.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-09.png` },
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-10.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-11.png` },
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-12.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-13.png` },
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-14.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-15.png` },
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-16.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-17.png` },
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-18.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-19.png` },
+  { srcf: `${import.meta.env.BASE_URL}fotos_servicios-20.png`, srcb: `${import.meta.env.BASE_URL}fotos_servicios-21.png` },
+];
+---
+
+<section id="Clientes" class="mt-40">
+  <marcas-carousel class="splide flex justify-center relative max-w-[100%] w-[100%]">
+    <div class="splide__track">
+      <div class="splide__list">
+        {images.map((image) => (
+          <div class="splide__slide">
+            <div class="flip-box h-full w-full">
+              <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
+                <img src={image.srcf} alt="Clientes" class="flip-box-front" />
+                <img src={image.srcb} alt="Clientes" class="flip-box-back absolute" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </marcas-carousel>
+</section>
+<script>
+  import { Splide, type Options as SplideOptions } from "@splidejs/splide";
+  import { Intersection } from "@splidejs/splide-extension-intersection";
+
+  const options: SplideOptions = {
+    type: "loop",
+    autoplay: "pause",
+    interval: 4000,
+    pauseOnHover: true,
+    lazyLoad: "nearby",
+    preloadPages: 1,
+    updateOnMove: true,
+    arrows: false,
+    padding: "33.5%",
+    intersection: {
+      inView: {
+        autoplay: true,
+      },
+      outView: {
+        autoplay: false,
+      },
+    },
+    breakpoints: {
+      2100: {
+        // 4xl
+        padding: "31.5%",
+      },
+      1800: {
+        // 3xl
+        padding: "29.5%",
+      },
+      1536: {
+        // 2xl
+        padding: "27.5%",
+      },
+      1280: {
+        // xl
+        padding: "25%",
+      },
+      1024: {
+        // lg
+        padding: "20%",
+      },
+      768: {
+        // md
+        padding: "10%",
+      },
+      640: {
+        // sm
+        padding: "10px",
+      },
+    },
+  };
+
+  class MarcasCarousel extends HTMLElement {
+    splide: Splide | null = null;
+
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.splide = new Splide(this, options);
+      this.splide.mount({ Intersection });
+      // this.addEventListener("click", this.handleClick);
+    }
+
+    disconnectedCallback() {
+      // this.removeEventListener("click", this.handleClick);
+      this.splide?.destroy();
+    }
+  }
+  window.customElements.define("marcas-carousel", MarcasCarousel);
+</script>
+{/*
   <div class="grid grid-cols-3 gap-x-16 gap-y-10 mx-24">
     <div class="flip-box w-full h-full">
       <div class="flip-box-inner grid grid-cols-1 gap-5 w-full h-full">
@@ -124,4 +229,4 @@
       </div>
     </div>
   </div>
-</section>
+*/}
