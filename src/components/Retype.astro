@@ -21,9 +21,9 @@
 <script>
   if (typeof window !== 'undefined') {
     document.addEventListener("DOMContentLoaded", function() {
-      const section = document.getElementById('retype-section');
-      const textElement = document.getElementById("content");
-      const cursorElement = document.getElementById("cursor");
+      const section = document.getElementById('retype-section')!!;
+      const textElement = document.getElementById("content")!!;
+      const cursorElement = document.getElementById("cursor")!!;
       const text = "Te invitamos a vivir con nosotras\nlas nuevas tendencias, el diseño y\nla era digital en la esencia de tu marca.";
       let index = 0;
       const speed = 100;  // Velocidad de escritura en milisegundos
