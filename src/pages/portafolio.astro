@@ -1,10 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import Servicios from "../components/Servicios.astro";
-import Clientes from "../components/Clientes.astro";
 import MainPage from "../components/MainPage.astro";
-import Retype from "../components/Retype.astro";
-import { FaInstagram } from "react-icons/fa/index";
+import Designs from "../components/Designs.astro";
+import Organics from "../components/Organics.astro";
 import "../css/main.css";
 ---
 
@@ -22,47 +20,18 @@ import "../css/main.css";
         </div>
       </section>
     </section>
-    <section class="flex justify-evenly align-center py-10">
-      <div class="bg-[#555636] py-3 px-4 rounded-full">  
-    </div><h2 class="text-4xl text-[#555636] font-bold">DISEÑO</h2>
-    <div class="bg-[#555636] py-3 px-4 rounded-full"></div>
+    <section class="flex justify-evenly align-center py-20">
+      <div class="bg-[#555636] py-3 px-4 rounded-full my-1"></div>
+      <h2 class="text-5xl text-[#555636] font-bold">DISEÑO</h2>
+      <div class="bg-[#555636] py-3 px-4 rounded-full my-1"></div>
     </section>
   </section>
-  <Servicios />
-  <Clientes />
-  <div class="w-full h-32">
-    <Retype />
-  </div>
-  <section class="justify-center grid grid-col-1 text-center mt-28">
-    <p class="text-red-500 font-medium text-2xl">NICHO</p>
-    <div>
-      <p class="text-2xl">
-        BIENESTAR <span class="text-red-500">|</span> GASTRONOMÍA <span
-          class="text-red-500">|</span
-        > LIFESTYLE <span class="text-red-500">|</span> HOGAR <span
-          class="text-red-500">|</span
-        > FASHION
-      </p>
-    </div>
+  <Designs />
+  <section class="flex justify-evenly align-center py-20">
+    <div class="bg-[#EE561D] py-3 px-4 rounded-full my-7"></div>
+    <h2 class="text-5xl text-[#EE561D] DmSansExtraLight text-center"><span class="DmSansSemiBold">CREACIÓN DE CONTENIDO</span><br/>Orgánico</h2>
+    <div class="bg-[#EE561D] py-3 px-4 rounded-full my-7"></div>
   </section>
-  <section class="text-center text-3xl py-10 px-48">
-    <p class="text-[#555636]">
-      Perseguimos la efectividad, transparencia y compromiso para cumplir con
-      los estándares de tu marca.
-    </p>
-  </section>
-  <section>
-    <div class="grid grid-cols-1 text-center text-[#555636] mt-28 font-normal">
-      <div class="flex justify-center content-center">
-        <a
-          href="https://www.instagram.com/thestudioav?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        >
-          <FaInstagram className="m-auto text-4xl" />
-          <span class="text-[22px]"> @thestudioav </span>
-        </a>
-      </div>
-      <a href="" class="text-[22px]">thestudioav@gmail.com</a>
-    </div>
-  </section>
+  <Organics />
   <section class="py-16"></section>
 </MainPage>

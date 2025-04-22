@@ -1,18 +1,24 @@
 h2 {
-  font-family: "Poppins", sans-serif;
-    font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+    font-weight: 600;
     font-style: normal;
 }
 
 p {
   font-family: "Poppins", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
 }
 
 .DmSansExtraLight {
   font-family: "DM Sans", sans-serif;
     font-weight: 200;
+    font-style: normal;
+}
+
+.DmSansMedium {
+  font-family: "DM Sans", sans-serif;
+    font-weight: 500;
     font-style: normal;
 }
 
