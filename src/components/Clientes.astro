@@ -18,7 +18,7 @@ const images = [
       <div class="splide__list">
         {images.map((image) => (
           <div class="splide__slide">
-            <div class="flip-box h-full w-full">
+            <div class="flip-box w-full aspect-square">
               <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
                 <img src={image.srcf} alt="Clientes" class="flip-box-front" />
                 <img src={image.srcb} alt="Clientes" class="flip-box-back absolute" />
@@ -40,46 +40,18 @@ const images = [
     interval: 4000,
     pauseOnHover: true,
     lazyLoad: "nearby",
-    preloadPages: 1,
+    preloadPages: 3,
+    perPage: 3,
+    pagination: false,
     updateOnMove: true,
-    arrows: false,
-    padding: "33.5%",
+    arrows: true,
+    arrowPath: "M10.21,38.54l19.58-19.58C23.42,13.13,17.05,7.29,10.68,1.46",
     intersection: {
       inView: {
         autoplay: true,
       },
       outView: {
         autoplay: false,
-      },
-    },
-    breakpoints: {
-      2100: {
-        // 4xl
-        padding: "31.5%",
-      },
-      1800: {
-        // 3xl
-        padding: "29.5%",
-      },
-      1536: {
-        // 2xl
-        padding: "27.5%",
-      },
-      1280: {
-        // xl
-        padding: "25%",
-      },
-      1024: {
-        // lg
-        padding: "20%",
-      },
-      768: {
-        // md
-        padding: "10%",
-      },
-      640: {
-        // sm
-        padding: "10px",
       },
     },
   };

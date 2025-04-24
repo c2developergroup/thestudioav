@@ -24,20 +24,89 @@
       const section = document.getElementById('retype-section')!!;
       const textElement = document.getElementById("content")!!;
       const cursorElement = document.getElementById("cursor")!!;
-      const text = "Te invitamos a vivir con nosotras\nlas nuevas tendencias, el diseño y\nla era digital en la esencia de tu marca.";
-      let index = 0;
+
+      const spans = [{
+        text: "Te invitamos a ",
+        style: {}
+      }, {
+        text: "vivir con nosotras",
+        style: {
+          color: "#ee561d"
+        }
+      }, {
+        text: "\n",
+        style: {},
+        realElement: document.createElement('br'),
+      }, {
+        text: "las ",
+        style: {}
+      }, {
+        text: "nuevas tendencias",
+        style: {
+          color: "#ee561d"
+        }
+      }, {
+        text: ", el diseño y",
+        style: {}
+      }, {
+        text: "\n",
+        style: {},
+        realElement: document.createElement('br'),
+      }, {
+        text: "la ",
+        style: {}
+      }, {
+        text: "era digital",
+        style: {
+          color: "#ee561d"
+        }
+      }, {
+        text: " en la esencia de tu marca.",
+        style: {}
+      }];
+      let indexArray = 0;
+      let indexText = 0;
       const speed = 100;  // Velocidad de escritura en milisegundos
 
       function type() {
-        const currentText = text.slice(0, index).replace(/\n/g, '<br>');
-        textElement.innerHTML = currentText;
+        console.log(`Typing span[${indexArray}].text[${indexText}]...`);
+        const currentSpan = spans[indexArray]!!;
+        const currentSpanText = currentSpan.text.slice(0, ++indexText);
+        const currentSpanInnerElement = currentSpan.realElement;
 
-        if (index < text.length) {
-          index++;
-          setTimeout(type, speed);
+        const currentSpanElement = document.createElement('span');
+        Object.entries(currentSpan.style as Record<string, string>).forEach(([key, value]) => {
+          currentSpanElement.style.setProperty(key, value);
+        });
+
+        if (currentSpanInnerElement && indexText == currentSpan.text.length) {
+          currentSpanElement.appendChild(currentSpanInnerElement);
         } else {
-          cursorElement.classList.add('blink'); // Añadir clase de titileo cuando termine el efecto
+          currentSpanElement.textContent = currentSpanText;
         }
+
+        if (indexText < currentSpan.text.length) {
+          currentSpanElement.id = "--retype-span-current";
+          if (indexText == 1)
+            textElement.appendChild(currentSpanElement);
+          else
+            textElement.replaceChild(currentSpanElement, document.getElementById("--retype-span-current")!!);
+        } else {
+          currentSpanElement.id = `--retype-span-${indexArray}`;
+          if (indexText == 1)
+            textElement.appendChild(currentSpanElement);
+          else
+            textElement.replaceChild(currentSpanElement, document.getElementById("--retype-span-current")!!);
+
+          indexArray++;
+          indexText = 0;
+
+          if (indexArray >= spans.length) {
+            cursorElement.classList.add('blink'); // Añadir clase de titileo cuando termine el efecto
+            return;
+          }
+        }
+        setTimeout(type, speed);
       }
 
       const observer = new IntersectionObserver(entries => {
