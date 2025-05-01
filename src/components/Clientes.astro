@@ -13,22 +13,28 @@ const images = [
 ---
 
 <section id="Clientes" class="mt-40">
-  <marcas-carousel class="splide flex justify-center relative max-w-[100%] w-[100%]">
-    <div class="splide__track">
-      <div class="splide__list">
-        {images.map((image) => (
-          <div class="splide__slide">
-            <div class="flip-box w-full aspect-square">
-              <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
-                <img src={image.srcf} alt="Clientes" class="flip-box-front" />
-                <img src={image.srcb} alt="Clientes" class="flip-box-back absolute" />
+  <div class="flex">
+    <div class="flex-auto w-32"></div>
+    <div class="flex-none w-full max-w-[1000px]">
+      <marcas-carousel class="splide flex justify-center relative max-w-[100%] w-[100%]">
+        <div class="splide__track">
+          <div class="splide__list">
+            {images.map((image) => (
+              <div class="splide__slide">
+                <div class="flip-box w-full aspect-square">
+                  <div class="flip-box-inner grid grid-cols-1 text-white gap-5">
+                    <img src={image.srcf} alt="Clientes" class="flip-box-front" />
+                    <img src={image.srcb} alt="Clientes" class="flip-box-back absolute" />
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      </marcas-carousel>
     </div>
-  </marcas-carousel>
+    <div class="flex-auto w-32"></div>
+  </div>
 </section>
 <script>
   import { Splide, type Options as SplideOptions } from "@splidejs/splide";

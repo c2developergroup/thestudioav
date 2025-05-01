@@ -12,19 +12,20 @@ import { FaInstagram } from "react-icons/fa/index";
   <section class="">
     <Navbar />
     <section>
-      <section class="bg-[url('/banner-main.jpg')] hover:bg-[url('/banner-main2.jpg')] bg-contain transition-all bg-center duration-300 flex justify-center p-24 relative">
+      <section class="bg-[url('/banner-main.jpg')] hover:bg-[url('/banner-main2.jpg')] bg-cover bg-top transition-all duration-300 flex justify-center p-24 relative">
         <h2 class="text-white text-5xl DmSansMedium text-center relative z-20">
           conectamos tu marca<br /> 
           de forma exclusiva<br />
           en su propio mundo. 
         </h2>
       </section>
-      <div class="flex justify-end pr-28 -mb-20 relative -top-40">
+      {/* <div class="flex justify-end pr-28 -mb-20 relative -top-40">
         <img src="/lines.png" class="absolute top-0 -z-10 w-48 h-auto" />
-      </div>
+      </div> */}
     </section>
-    <section class="flex p-14 mt-20">
-      <div class="grid grid-cols-1 gap-5 w-1/2 ml-56 text-xl">
+    <section class="flex items-start">
+      <div class="flex-auto w-32"></div>
+      <div class="flex-none py-14 grid grid-cols-1 gap-5 w-1/2 max-w-[800px] text-xl">
         <p class="text-[#555636]">
           Somos mentes creativas, estratégicas y planificadas
         </p>
@@ -37,6 +38,13 @@ import { FaInstagram } from "react-icons/fa/index";
           cada paso que damos.
         </p>
       </div>
+      <div class="flex-none w-16"></div>
+      <div class="flex-none w-48">
+        <img
+          src="/lines_short.png"
+        />
+      </div>
+      <div class="flex-auto w-16"></div>
     </section>
   </section>
   <Servicios />
@@ -45,35 +53,41 @@ import { FaInstagram } from "react-icons/fa/index";
     <Retype />
   </div>
   <section class="justify-center grid grid-col-1 text-center mt-28">
-    <p class="text-red-500 font-medium text-2xl">NICHO</p>
+    <p class="text-[#ee561d] font-medium text-2xl">NICHO</p>
     <div>
       <p class="text-2xl">
-        BIENESTAR <span class="text-red-500">|</span> GASTRONOMÍA <span
-          class="text-red-500">|</span
-        > LIFESTYLE <span class="text-red-500">|</span> HOGAR <span
-          class="text-red-500">|</span
+        BIENESTAR <span class="text-[#ee561d]">|</span> GASTRONOMÍA <span
+          class="text-[#ee561d]">|</span
+        > LIFESTYLE <span class="text-[#ee561d]">|</span> HOGAR <span
+          class="text-[#ee561d]">|</span
         > FASHION
       </p>
     </div>
   </section>
-  <section class="text-center text-3xl py-10 px-48">
-    <p class="text-[#555636]">
-      Perseguimos la efectividad, transparencia y compromiso para cumplir con
-      los estándares de tu marca.
-    </p>
-  </section>
-  <section>
-    <div class="grid grid-cols-1 text-center text-[#555636] mt-28 font-normal">
-      <div class="flex justify-center content-center">
-        <a
-          href="https://www.instagram.com/thestudioav?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        >
-          <FaInstagram className="m-auto text-4xl" />
-          <span class="text-[22px]"> @thestudioav </span>
-        </a>
-      </div>
-      <a href="" class="text-[22px]">thestudioav@gmail.com</a>
+  <div class="flex">
+    <div class="flex-auto w-32"></div>
+    <div class="flex-none w-full max-w-[1000px]">
+      <section class="text-center text-3xl py-10 px-48">
+        <p class="text-[#555636]">
+          Perseguimos la efectividad, transparencia y compromiso para cumplir con
+          los estándares de tu marca.
+        </p>
+      </section>
+      <section>
+        <div class="grid grid-cols-1 text-center text-[#555636] mt-28 font-normal">
+          <div class="flex justify-center content-center">
+            <a
+              href="https://www.instagram.com/thestudioav?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            >
+              <FaInstagram className="m-auto text-4xl" />
+              <span class="text-[22px]"> @thestudioav </span>
+            </a>
+          </div>
+          <a href="" class="text-[22px]">thestudioav@gmail.com</a>
+        </div>
+      </section>
     </div>
-  </section>
+    <div class="flex-auto w-32"></div>
+  </div>
   <section class="py-16"></section>
 </MainPage>
